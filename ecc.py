@@ -24,15 +24,6 @@ class FieldElement:
     def __repr__(self):
         return 'FieldElement_{}({})'.format(self.prime, self.num)
 
-    def __add__(self, other):
-        if self.prime != other.prime:
-            raise RuntimeError('Primes must be the same')
-        # self.num and other.num are the actual values
-        # self.prime is what you'll need to mod against
-        # You need to return an element of the same class
-        # use: self.__class__(num, prime)
-        raise NotImplementedError
-
     def __sub__(self, other):
         if self.prime != other.prime:
             raise RuntimeError('Primes must be the same')
